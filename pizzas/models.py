@@ -14,4 +14,11 @@ class Topping(models.Model):
     topping_name = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.text[50]}..."
+        return f"{self.topping_name[:100]}"
+
+class Comment(models.Model):
+    pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
+    comment_name = models.TextField()
+
+    def __str__(self):
+        return f"{self.comment_name[:100]}"

@@ -17,6 +17,8 @@
     {% endfor %}
 </ul>
 
+<p><a href="{% url 'pizzas:new_comment' pizza.id %}">Add a new comment</a></p>
+
 <ul>
     {% for c in comments %}
     <li>

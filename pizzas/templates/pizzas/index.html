@@ -1,9 +1,20 @@
 {% extends "pizzas/base.html" %}
 
+{% load static %}
 
-{% block content %}
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class"display-3>Mama Mia Pizzeria</h1>
+    <p class="lead">Pizza made from scratch by Grandma Mia Bella</p>
 
-<p>Mama Mia offers the perfect pizza for the perfect customer!
-</p>
 
-{% endblock content %}
+
+
+</div>
+
+<style>
+    body {
+        background-image: url('https://thumbs.dreamstime.com/b/old-street-medieval-italian-city-tuscany-italy-old-street-medieval-italian-city-131749488.jpg')
+    }
+</style>
+{% endblock page_header %}

@@ -18,8 +18,9 @@ def pizzas(request):
 def pizza(request, pizza_id):
     pizza = Pizza.objects.get(id=pizza_id)
     toppings = pizza.topping_set.all()
+    comments = pizza.comment_set.order_by()
 
-    context = {'pizza':pizza,'toppings':toppings}
+    context = {'pizza':pizza,'toppings':toppings, 'comments':comments}
     
     return render(request, 'pizzas/pizza.html', context)
 

@@ -1,19 +1,30 @@
 {% extends "pizzas/base.html" %}
 
+{% block page_header %}
+<h1>Pizza Menu</h1>
+{% endblock page_header %}
 
 {% block content %}
-
-<p> Pizzas </p>
 
 <ul>
     {% for p in pizzas %}
 
     <li>
-        <a href="{% url 'pizzas:pizza' p.id %}">{{ p }} </a>
+        <h3>
+            <a href="{% url 'pizzas:pizza' p.id %}">{{ p }} </a>
+        </h3>
     </li>
     {% empty %}
-    <li>No pizzas have been added yet.</li>
+    <li>
+        <h3>No pizzas have been added yet.</h3>
+    </li>
     {% endfor %}
 </ul>
+
+<style>
+    body {
+        background-image: url('https://wallpapertag.com/wallpaper/middle/9/6/8/311219-beige-background-3430x1495-samsung.jpg')
+    }
+</style>
 
 {% endblock content %}

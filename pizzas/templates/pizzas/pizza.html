@@ -1,11 +1,9 @@
 {% extends "pizzas/base.html" %}
 
-
+{% block page_header %}
+<h3>{{ pizza }}</h3>
+{% endblock page_header %}
 {% block content %}
-
-<p>
-    Pizza: {{ pizza }}
-</p>
 
 <ul>
     {% for t in toppings %}
@@ -28,5 +26,11 @@
     <li> There are no comments for this pizza yet.</li>
     {% endfor %}
 </ul>
+
+<style>
+    body {
+        background-image: url('https://wallpapertag.com/wallpaper/middle/9/6/8/311219-beige-background-3430x1495-samsung.jpg')
+    }
+</style>
 
 {% endblock content %}
